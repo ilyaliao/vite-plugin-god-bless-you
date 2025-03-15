@@ -15,11 +15,11 @@ npm i -D vite-plugin-god-bless-you
 
 ```ts
 import { defineConfig } from 'vite'
-import VitePluginGodBlessYou from 'vite-plugin-god-bless-you'
+import GodBlessYou from 'vite-plugin-god-bless-you'
 
 export default defineConfig({
   plugins: [
-    VitePluginGodBlessYou(),
+    GodBlessYou(),
   ],
 })
 ```
@@ -27,7 +27,7 @@ export default defineConfig({
 ## Configuration
 
 ```ts
-VitePluginGodBlessYou({
+GodBlessYou({
   // default ascii arts
   art: 'dragon',
 
@@ -42,7 +42,7 @@ VitePluginGodBlessYou({
 You can customize your ASCII art
 
 ```typescript
-VitePluginGodBlessYou({
+GodBlessYou({
   customArt: `
     /\\_/\\
    ( o.o )
