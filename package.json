@@ -1,0 +1,79 @@
+{
+  "name": "vite-plugin-god-bless-you",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.6.3",
+  "description": "God will bless you",
+  "author": "IlyaL <ilyaliao324@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ilyaliao/vite-plugin-god-bless-you#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilyaliao/vite-plugin-god-bless-you.git"
+  },
+  "bugs": "https://github.com/ilyaliao/vite-plugin-god-bless-you/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && pnpm publish",
+    "start": "tsx src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks"
+  },
+  "peerDependencies": {
+    "vite": "^6.2.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:cli",
+    "@antfu/ni": "catalog:cli",
+    "@antfu/utils": "catalog:inlined",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "@tsconfig/svelte": "^5.0.4",
+    "@types/node": "catalog:types",
+    "@types/react": "catalog:react",
+    "@types/react-dom": "catalog:react",
+    "@vitejs/plugin-react": "catalog:react",
+    "@vitejs/plugin-vue": "catalog:vue",
+    "@vue/tsconfig": "catalog:vue",
+    "bumpp": "catalog:cli",
+    "eslint": "catalog:cli",
+    "globals": "catalog:react",
+    "lint-staged": "catalog:cli",
+    "react": "catalog:react",
+    "react-dom": "catalog:react",
+    "simple-git-hooks": "catalog:cli",
+    "svelte": "^5.23.0",
+    "svelte-check": "^4.1.5",
+    "tinyexec": "catalog:utils",
+    "tsx": "catalog:cli",
+    "typescript": "catalog:cli",
+    "unbuild": "catalog:cli",
+    "vite": "catalog:cli",
+    "vitest": "catalog:testing",
+    "vitest-package-exports": "catalog:testing",
+    "vue": "catalog:vue",
+    "vue-tsc": "catalog:vue",
+    "yaml": "catalog:testing"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm i --frozen-lockfile --ignore-scripts --offline && npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
