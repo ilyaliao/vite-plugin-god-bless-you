@@ -15,7 +15,7 @@ npm i -D vite-plugin-god-bless-you
 
 ```ts
 import { defineConfig } from 'vite'
-import { VitePluginGodBlessYou } from 'vite-plugin-god-bless-you'
+import VitePluginGodBlessYou from 'vite-plugin-god-bless-you'
 
 export default defineConfig({
   plugins: [
