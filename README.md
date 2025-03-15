@@ -7,6 +7,10 @@
 
 Vite plugin for adding ASCII art to bless your code and keep it bug-free!
 
+<p align="center">
+<img width="600" alt="Screenshot" src="https://github.com/user-attachments/assets/0ac8695e-95c1-4731-a233-8e7c7d2205b1">
+</p>
+
 ## Usage
 
 ```bash
